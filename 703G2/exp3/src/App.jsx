@@ -16,7 +16,7 @@ function App() {
 
         <Route path='/dashboard' element={<Dashboard />} >
           <Route path='studentlist' element={<StudentList />} />
-          <Route path="profile" element={<StudentProfile />} />
+          <Route path="profile/:id" element={<StudentProfile />} />
           {/* /dashboard/profile */}
             </Route>
 

@@ -5,6 +5,7 @@ import Home from "./pages/Home"
 import Dashboard from './pages/Dashboard'
 import Login from './pages/Login'
 import StudentList from './pages/StudentList'
+import StudentProfile from './pages/StudentProfile'
 function App() {
   return (
     <>
@@ -12,21 +13,29 @@ function App() {
 
       <Routes>
         <Route path="/" element={<Home />} />
-      <Route path="/dashboard" element={<Dashboard />} >
-        <Route path='studentlist' element={<StudentList />} />
-    </Route>
 
+        <Route path="/dashboard" element={<Dashboard />} >
+          <Route path='studentlist' element={<StudentList />} />
+          <Route path="profile/:id" element={<StudentProfile />} />
+        </Route>
 
+        /* 1./dashboard
+        2./dashboard/studentlist
+        3/dashbord/profile */
 
 
         <Route path='/login' element={<Login />} />
-        
+
 
       </Routes>
     </>
-   
+
 
   )
 }
 
 export default App
+
+11348
+796
+11276

@@ -1,5 +1,6 @@
 const students = [
     {
+        id: 1,
         name: "Aarav Sharma",
         email: "aarav.sharma@example.com",
         phone: "9876543210",
@@ -9,6 +10,7 @@ const students = [
         course: "MERN Stack Development",
     },
     {
+        id:2,
         name: "Priya Verma",
         email: "priya.verma@example.com",
         phone: "9876543211",
@@ -18,6 +20,7 @@ const students = [
         course: "Python Programming",
     },
     {
+        id:3,
         name: "Rohan Singh",
         email: "rohan.singh@example.com",
         phone: "9876543212",
@@ -27,6 +30,7 @@ const students = [
         course: "Java Full Stack",
     },
     {
+        id:4,
         name: "Neha Gupta",
         email: "neha.gupta@example.com",
         phone: "9876543213",
@@ -36,6 +40,7 @@ const students = [
         course: "Data Structures",
     },
     {
+        id:5,
         name: "Aditya Mehta",
         email: "aditya.mehta@example.com",
         phone: "9876543214",
@@ -45,6 +50,7 @@ const students = [
         course: "React.js",
     },
     {
+        id:6,
         name: "Sneha Kapoor",
         email: "sneha.kapoor@example.com",
         phone: "9876543215",
@@ -54,6 +60,7 @@ const students = [
         course: "Node.js",
     },
     {
+        id:7,
         name: "Karan Malhotra",
         email: "karan.malhotra@example.com",
         phone: "9876543216",
@@ -63,6 +70,7 @@ const students = [
         course: "C++ Programming",
     },
     {
+        id:8,
         name: "Ananya Joshi",
         email: "ananya.joshi@example.com",
         phone: "9876543217",
@@ -72,6 +80,7 @@ const students = [
         course: "Machine Learning",
     },
     {
+        id:9,
         name: "Vikram Patel",
         email: "vikram.patel@example.com",
         phone: "9876543218",
@@ -81,6 +90,7 @@ const students = [
         course: "MongoDB",
     },
     {
+        id:10,
         name: "Isha Khan",
         email: "isha.khan@example.com",
         phone: "9876543219",

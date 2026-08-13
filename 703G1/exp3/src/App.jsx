@@ -6,6 +6,7 @@ import Login from "./pages/Login"
 import NotFound from "./pages/NotFound"
 import StudentList from "./pages/StudentList"
 import StudentProfile from './pages/StudentProfile'
+import ProtectedRoute from "./components/ProtectedRoute"
 function App() {
 
   return (
@@ -15,15 +16,17 @@ function App() {
 
 
         <Route path="/" element={<Home />} />
-        <Route path="/dashboard" element={<Dashboard />} >
+        <Route path="/dashboard" element={
+          <ProtectedRoute>
+            <Dashboard />
+          </ProtectedRoute>
+         
+        } >
         <Route path="students" element={<StudentList />} />
-        <Route path="studentprofile" element={<StudentProfile />} />
+        <Route path=":id" element={<StudentProfile />} />
           </Route>
        
        
-
-
-
 
         <Route path="/login" element={<Login />} />
         <Route path="*" element={<NotFound />} />
