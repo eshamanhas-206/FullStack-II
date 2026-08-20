@@ -51,10 +51,6 @@ function App() {
           
         </Route>
 
-        /* 1./dashboard
-        2./dashboard/studentlist
-        3/dashbord/profile */
-
 
         <Route path='/login' element={<Login />} />
 

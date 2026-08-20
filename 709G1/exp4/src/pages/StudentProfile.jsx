@@ -1,8 +1,8 @@
 import React from 'react';
 import { Link, useParams } from 'react-router';
+import students from '../data/student.js';
 
-
-function StudentProfile({students}) {
+function StudentProfile() {
   const { id } = useParams();
 
   const student = students.find(
