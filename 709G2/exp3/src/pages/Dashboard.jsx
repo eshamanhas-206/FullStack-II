@@ -18,13 +18,25 @@ function Dashboard() {
   const droppedStudents = students.filter(
     (student) => student.status === "Dropped"
   ).length;
-
+  function handlelogout() {
+    localStorage.removeItem("loggedIn")
+    window.location.href="/home"
+  }
+  //app.jsx
+  // protectroutes.jsx
+  // navbar.jsx
+  // dashboard.js
+  // nofound.jsx
   return (
     <div style={styles.dashboard}>
       {/* Header */}
       <div style={styles.header}>
         <div>
-          <p style={styles.welcome}>Welcome back 👋</p>
+          <p style={styles.welcome}>Welcome back 👋
+            <button onClick={handlelogout}>Logout</button>
+          </p>
+         
+          
           <h1 style={styles.title}>Student Dashboard</h1>
           <p style={styles.subtitle}>
             Manage students and track their academic progress.

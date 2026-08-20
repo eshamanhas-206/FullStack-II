@@ -1,8 +1,8 @@
 import React from 'react';
 import { Link, Outlet } from 'react-router';
-import students from '../data/student.js';
 
-function StudentList() {
+
+function StudentList({students}) {
   return (
     <>
       <style>{`

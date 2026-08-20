@@ -3,6 +3,15 @@ import { Link, Outlet } from "react-router";
 import students from "../data/students";
 
 function Dashboard() {
+  function handlelogout() {
+    localStorage.removeItem("isLoggedIn")
+    window.location.href="/"
+  }
+  // app.jsx
+  // NotFound.jsx
+  // Dashboard.jsx
+  // ProtectedRoutes.jsx
+  // NavBar.jsx
   return (
     <>
       <style>{`
@@ -134,7 +143,9 @@ function Dashboard() {
         <div className="dashboard-wrapper">
 
           <div className="dashboard-header">
-            <h1>Dashboard</h1>
+            <h1>Dashboard
+            <button onClick={handlelogout}>Logout</button>
+            </h1>
             <p>
               Welcome back! Here's an overview of your students.
             </p>

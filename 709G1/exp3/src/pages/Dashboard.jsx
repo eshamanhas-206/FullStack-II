@@ -1,8 +1,8 @@
 import React from 'react';
-import students from '../data/student';
+
 import { Link, Outlet } from 'react-router';
 
-function Dashboard() {
+function Dashboard({students}) {
   const activeStudents = students.filter(
     student => student.status === "Active"
   ).length;
@@ -15,6 +15,10 @@ function Dashboard() {
     student => student.status === "Graduated"
   ).length;
 
+  function handleLogout(){
+    localStorage.removeItem("isLoggedIn")
+    window.location.href="/home"
+  }
   return (
     <>
       <style>{`
@@ -168,6 +172,7 @@ function Dashboard() {
             <h1 className="dashboard-title">
               Dashboard
             </h1>
+            <button onClick={handleLogout}>Logout</button>
 
             <p className="dashboard-subtitle">
               Manage and view student information
@@ -229,6 +234,15 @@ function Dashboard() {
             <p className="card-description">
               View the complete list of students and their profiles.
             </p>
+
+            
+            <Link
+              className="student-link"
+              to="addstudent"
+             >
+              👨‍🎓 Add Student +
+            </Link>
+
 
             <Link
               className="student-link"
